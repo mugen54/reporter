@@ -14,7 +14,3 @@ class ReportFiller:
         data = json.load(open(filename))
         df = json_normalize(data)
         return df
-
-    
-
-
