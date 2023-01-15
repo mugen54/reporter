@@ -1,0 +1,59 @@
+{# templates/species_templates.html #}
+
+<!DOCTPYE HTML>
+    <html>
+
+    <head>
+
+    </head>
+
+    <body>
+        <div>
+            {{species_data.species_name}}
+        </div>
+        <div>
+            {{species_data.description}}
+        </div>
+        <div>
+            {{species_data.conservation_status}}
+        </div>
+
+        <div>
+            {% for habitate in species_data.current_habitates %}
+            Current habitates :
+            <div>
+                {{habitate.name}}
+                {{habitate.population_size}}
+                {{habitate.habitat_quality}}
+            </div>
+            {% endfor %}
+        </div>
+        {% for lost_habitate in species_data.lost_habitats %}
+        <div>
+            Lost habitates : {{lost_habitate}}
+        </div>
+        {% endfor %}
+        {%for habitate in species_data.lost_habitats %}
+        <div>
+            Lost habitates : {{habitate}}
+        </div>
+        {% endfor %}
+        {%for threat in species_data.threats %}
+        <div>
+            Threat : {{threat}}
+        </div>
+        {% endfor %}
+        {%for measure in species_data.conservation_measures %}
+        <div>
+            Threat : {{measure}}
+        </div>
+        {% endfor %}
+        {%for reference in species_data.references %}
+        <div>
+            References : {{reference}}
+        </div>
+        {% endfor %}
+
+    </body>
+
+    </html>
