@@ -6,6 +6,7 @@
         "references": []
     },
     "description": {
+        "content": "",
         "references": [
             "description_taxonomic_classification",
             "description_physical_characteristics"

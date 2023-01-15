@@ -14,3 +14,13 @@ class ReportFiller:
         data = json.load(open(filename))
         df = json_normalize(data)
         return df
+        
+    def get_species_data(self,df):
+        dict = {}
+        dict['species_name'] = df['species_name.content.name'][0]
+        ref_desc = ""
+        for ref in df['description.references'][0]:
+            ref_desc += df[ref+".content"][0]
+        dict['description'] = ref_desc
+        #dict['description'] = df['description.content'][0]
+        return dict
