@@ -1,0 +1,52 @@
+{
+    "species_name": {
+        "content": {
+            "name": "Panthera leo"
+        },
+        "references": []
+    },
+    "description": {
+        "content": "",
+        "references": [
+            "description_taxonomic_classification",
+            "description_physical_characteristics"
+        ]
+    },
+    "description_taxonomic_classification": {
+        "content": "Large feline with orange fur and black stripes",
+        "references": []
+    },
+    "description_physical_characteristics": {
+        "content": "Reptilia, Mammalia, Carnivora, Felidae, Panthera",
+        "references": []
+    },
+    "conservation_status": "Critically Endangered",
+    "current_habitats": [
+        {
+            "name": "Serengeti National Reserve",
+            "population_size": 500,
+            "habitat_quality": "Good"
+        },
+        {
+            "name": "Maasai Mara National Park",
+            "population_size": 250,
+            "habitat_quality": "Moderate"
+        }
+    ],
+    "lost_habitats": [
+        "West African tropical forest",
+        "East African shrubland"
+    ],
+    "threats": [
+        "Poaching for fur trade",
+        "Habitat loss due to agricultural expansion"
+    ],
+    "conservation_measures": [
+        "Anti-poaching patrols",
+        "Habitat restoration projects"
+    ],
+    "references": [
+        "Smith, J. (2018). Panthera leo population trends in the Serengeti. Journal of Wildlife Conservation",
+        "Khan, M. (2020). The impact of agricultural expansion on Panthera leo habitat in East Africa. Environmental Research Letters"
+    ]
+}
