@@ -6,7 +6,7 @@ from pandas import json_normalize
 class ReportFiller:
 
     def get_template(self,filename):
-        environment = jinja.Environment(loader=jinja.FileSystemLoader("templates/"))
+        environment = jinja.Environment(loader=jinja.FileSystemLoader("reporter/templates/"))
         template = environment.get_template(filename)
         return template
 
@@ -17,10 +17,29 @@ class ReportFiller:
         
     def get_species_data(self,df):
         dict = {}
-        dict['species_name'] = df['species_name.content.name'][0]
-        ref_desc = ""
+        content = ""
+        #species_name
+        content = df['species_name.content.name'][0]
+        for ref in df['species_name.references'][0]:
+            content += df[ref+".content"][0]
+        dict['species_name'] = content
+        #decription
+        content = df['description.content'][0]
         for ref in df['description.references'][0]:
-            ref_desc += df[ref+".content"][0]
-        dict['description'] = ref_desc
-        #dict['description'] = df['description.content'][0]
+            content += df[ref+".content"][0]
+            for ref2 in df[ref+".references"][0]:
+                content += df[ref2+".content"][0]
+        dict['description'] = content
+        #conservation status
+        dict['conservation_status'] = df['conservation_status'][0]
+        #current_habitats
+        dict['current_habitats'] = df['current_habitats'][0]
+        #lost_habitats
+        dict['lost_habitats'] = df['lost_habitats'][0]
+        #threats
+        dict['threats'] = df['threats'][0]
+        #conservation_measures
+        dict['conservation_measures'] = df['conservation_measures'][0]
+        #references
+        dict['references'] = df['references'][0]
         return dict
