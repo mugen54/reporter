@@ -5,6 +5,8 @@ filler = report_filler.ReportFiller()
 
 template = filler.get_template("species_template.html")
 json = filler.get_json_data("data_samples/input.json")
+environment = jinja.Environment(loader=jinja.FileSystemLoader("reporter/templates/"))
+template = environment.get_template("species_template.html")
 dictionnaire = filler.get_species_data(json)
 
 css_file = open("data_samples/style.css")
