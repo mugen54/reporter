@@ -33,11 +33,6 @@
             Lost habitates : {{lost_habitate}}
         </div>
         {% endfor %}
-        {%for habitate in species_data.lost_habitats %}
-        <div>
-            Lost habitates : {{habitate}}
-        </div>
-        {% endfor %}
         {%for threat in species_data.threats %}
         <div>
             Threat : {{threat}}
@@ -45,7 +40,7 @@
         {% endfor %}
         {%for measure in species_data.conservation_measures %}
         <div>
-            Threat : {{measure}}
+            Measure : {{measure}}
         </div>
         {% endfor %}
         {%for reference in species_data.references %}

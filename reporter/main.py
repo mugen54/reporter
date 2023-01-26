@@ -1,14 +1,18 @@
-import pandas as pd
+import report_filler
+import jinja2 as jinja
+
+filler = report_filler.ReportFiller()
+
+template = filler.get_template("species_template.html")
+json = filler.get_json_data("data_samples/input.json")
+dictionnaire = filler.get_species_data(json)
+
+css_file = open("data_samples/style.css")
+css = filler.get_string_from_file(css_file)
 
 
-def function_a():
-    print("a")
-    value = 5/0
-    return 5
+filename = "rapport_espece.html"
 
-def function_b():
-    print("J appelle la fonction a")
-    function_a()
-
-
-function_b()
+context = {"species_data": dictionnaire}
+with open(filename, mode="w", encoding="utf-8") as results:
+    results.write(template.render(context))
