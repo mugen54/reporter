@@ -48,5 +48,13 @@
     "references": [
         "Smith, J. (2018). Panthera leo population trends in the Serengeti. Journal of Wildlife Conservation",
         "Khan, M. (2020). The impact of agricultural expansion on Panthera leo habitat in East Africa. Environmental Research Letters"
-    ]
+    ],
+    "criticy_index": {
+        "2015": 1,
+        "2016": 6,
+        "2017": 4,
+        "2018": 4,
+        "2019": 3,
+        "2020": 9
+    }
 }

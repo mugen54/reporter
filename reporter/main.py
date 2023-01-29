@@ -1,20 +1,8 @@
+import time
 import report_filler
+import file_fetcher
 import jinja2 as jinja
 
+
 filler = report_filler.ReportFiller()
-
-template = filler.get_template("species_template.html")
-json = filler.get_json_data("data_samples/input.json")
-environment = jinja.Environment(loader=jinja.FileSystemLoader("reporter/templates/"))
-template = environment.get_template("species_template.html")
-dictionnaire = filler.get_species_data(json)
-
-css_file = open("data_samples/style.css")
-css = filler.get_string_from_file(css_file)
-
-
-filename = "rapport_espece.html"
-
-context = {"species_data": dictionnaire, "css_style": css}
-with open(filename, mode="w", encoding="utf-8") as results:
-    results.write(template.render(context))
+filler.generate("species_template.html", "input.json", "style.css", "Rapport")
