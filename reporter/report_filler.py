@@ -48,4 +48,4 @@ class ReportFiller:
 
     def get_string_from_file(self, file):
         read_content = file.read()
-        print(read_content)
+        return read_content

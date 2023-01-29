@@ -15,6 +15,6 @@ css = filler.get_string_from_file(css_file)
 
 filename = "rapport_espece.html"
 
-context = {"species_data": dictionnaire}
+context = {"species_data": dictionnaire, "css_style": css}
 with open(filename, mode="w", encoding="utf-8") as results:
     results.write(template.render(context))
