@@ -1,0 +1,75 @@
+
+
+<!DOCTPYE HTML>
+    <html>
+
+    <head>
+        <style>
+            body {
+      font-family: Georgia, "Times New Roman",
+            Times, serif;
+      color: purple;
+      background-color: #d8da3d
+}
+
+h1 {
+      font-family: Helvetica, Geneva, Arial,
+            SunSans-Regular, sans-serif
+}
+        </style>
+    </head>
+
+    <body>
+        <div>
+            Panthera leo
+        </div>
+        <div>
+            Large feline with orange fur and black stripesReptilia, Mammalia, Carnivora, Felidae, Panthera
+        </div>
+        <div>
+            Critically Endangered
+        </div>
+
+        <div>
+            
+        </div>
+        
+        <div>
+            Lost habitates : West African tropical forest
+        </div>
+        
+        <div>
+            Lost habitates : East African shrubland
+        </div>
+        
+        
+        <div>
+            Threat : Poaching for fur trade
+        </div>
+        
+        <div>
+            Threat : Habitat loss due to agricultural expansion
+        </div>
+        
+        
+        <div>
+            Measure : Anti-poaching patrols
+        </div>
+        
+        <div>
+            Measure : Habitat restoration projects
+        </div>
+        
+        
+        <div>
+            References : Smith, J. (2018). Panthera leo population trends in the Serengeti. Journal of Wildlife Conservation
+        </div>
+        
+        <div>
+            References : Khan, M. (2020). The impact of agricultural expansion on Panthera leo habitat in East Africa. Environmental Research Letters
+        </div>
+        
+
+    </body>
+
+    </html>

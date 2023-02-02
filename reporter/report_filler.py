@@ -1,8 +1,5 @@
 import pandas as pd
-import jinja2 as jinja
-import json
 import file_fetcher
-from pandas import json_normalize
 
 
 class ReportFiller:
@@ -11,10 +8,9 @@ class ReportFiller:
 
     def generate(self, template_name, json_name, css_file_name, new_file_name):
         template = self.fetcher.get_template(template_name)
-        df = self.fetcher.get_json_data("data_samples/" + json_name)
+        df = self.fetcher.get_json_data_to_dataframe("data_samples/" + json_name)
         dictionnaire = self.get_species_data(df)
         css = self.fetcher.get_css(css_file_name)
-
         context = {"species_data": dictionnaire, "css_style": css}
         with open(new_file_name, mode="w", encoding="utf-8") as results:
             results.write(template.render(context))
@@ -24,7 +20,7 @@ class ReportFiller:
         dict["species_name"] = self.get_species_name(df)
         dict["description"] = self.get_description(df)
         # conservation status
-        dict["conservation_status"] = df["conservation_status"]
+        dict["conservation_status"] = df["conservation_status"][0]
         # current_habitats
         dict["current_habitats"] = df["current_habitats"][0]
         # lost_habitats
@@ -36,15 +32,6 @@ class ReportFiller:
         # references
         dict["references"] = df["references"][0]
         return dict
-
-    def get_data(self, df, key):
-        content = df[key][0]
-        return content
-
-    def get_references(self, df, key):
-        content = ""
-        for ref in df[key][0]:
-            content += ref
 
     def get_species_name(self, df):
         content = df["species_name.content.name"][0]
