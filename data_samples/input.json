@@ -20,36 +20,49 @@
         "content": "Reptilia, Mammalia, Carnivora, Felidae, Panthera",
         "references": []
     },
-    "conservation_status": "Critically Endangered",
-    "current_habitats": [
-        {
-            "name": "Serengeti National Reserve",
-            "population_size": 500,
-            "habitat_quality": "Good"
-        },
-        {
-            "name": "Maasai Mara National Park",
-            "population_size": 250,
-            "habitat_quality": "Moderate"
-        }
-    ],
-    "lost_habitats": [
-        "West African tropical forest",
-        "East African shrubland"
-    ],
-    "threats": [
-        "Poaching for fur trade",
-        "Habitat loss due to agricultural expansion"
-    ],
-    "conservation_measures": [
-        "Anti-poaching patrols",
-        "Habitat restoration projects"
-    ],
-    "references": [
-        "Smith, J. (2018). Panthera leo population trends in the Serengeti. Journal of Wildlife Conservation",
-        "Khan, M. (2020). The impact of agricultural expansion on Panthera leo habitat in East Africa. Environmental Research Letters"
-    ],
-    "criticy_index": {
+    "conservation_status": {
+        "content": "Critically Endangered",
+        "references": []
+    },
+    "current_habitats": {
+        "content": [
+            {
+                "name": "Serengeti National Reserve",
+                "population_size": 500,
+                "habitat_quality": "Good"
+            },
+            {
+                "name": "Maasai Mara National Park",
+                "population_size": 250,
+                "habitat_quality": "Moderate"
+            }
+        ]
+    },
+    "lost_habitats": {
+        "content": [
+            "West African tropical forest",
+            "East African shrubland"
+        ]
+    },
+    "threats": {
+        "content": [
+            "Poaching for fur trade",
+            "Habitat loss due to agricultural expansion"
+        ]
+    },
+    "conservation_measures": {
+        "content ": [
+            "Anti-poaching patrols",
+            "Habitat restoration projects"
+        ]
+    },
+    "references": {
+        "content ": [
+            "Smith, J. (2018). Panthera leo population trends in the Serengeti. Journal of Wildlife Conservation",
+            "Khan, M. (2020). The impact of agricultural expansion on Panthera leo habitat in East Africa. Environmental Research Letters"
+        ]
+    },
+    "criticity_index": {
         "2015": 1,
         "2016": 6,
         "2017": 4,

@@ -21,7 +21,7 @@
         </div>
 
         <div>
-            {% for habitate in species_data.current_habitates %}
+            {% for habitate in species_data.current_habitats %}
             Current habitates :
             <div>
                 {{habitate.name}}
@@ -30,26 +30,19 @@
             </div>
             {% endfor %}
         </div>
-        {% for lost_habitate in species_data.lost_habitats %}
+        
         <div>
-            Lost habitates : {{lost_habitate}}
+            Lost habitates : {{species_data.lost_habitats}}
         </div>
-        {% endfor %}
-        {%for threat in species_data.threats %}
         <div>
-            Threat : {{threat}}
+            Threat : {{species_data.threats}}
         </div>
-        {% endfor %}
-        {%for measure in species_data.conservation_measures %}
         <div>
-            Measure : {{measure}}
+            Measure : {{species_data.conservation_measures}}
         </div>
-        {% endfor %}
-        {%for reference in species_data.references %}
         <div>
-            References : {{reference}}
+            References : {{species_data.references}}
         </div>
-        {% endfor %}
 
     </body>
 

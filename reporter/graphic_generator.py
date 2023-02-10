@@ -1,17 +1,15 @@
 import file_fetcher
-import json
 import matplotlib.pyplot as plt
 
 class GraphicGenerator:
     def __init__(self):
         self.fetcher = file_fetcher.FileFetcher()
 
-    def generate(self, json_name, data):
+    def generate(self, json_name, data_name):
         criticy = self.fetcher.get_json_data("data_samples/" + json_name)[
-            data
+            data_name
         ]
-        x = []
-        y = []
+        x, y = [], []
         for key, value in criticy.items():
             x.append(key)
             y.append(value)
