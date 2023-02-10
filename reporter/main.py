@@ -1,20 +1,18 @@
+import time
 import report_filler
+import file_fetcher
 import jinja2 as jinja
+import plot_generator
+
 
 filler = report_filler.ReportFiller()
+filler.generate(
+    "species_template.html", "input.json", "style.css", "rapport_espece.html"
+)
 
-template = filler.get_template("species_template.html")
-json = filler.get_json_data("data_samples/input.json")
-environment = jinja.Environment(loader=jinja.FileSystemLoader("reporter/templates/"))
-template = environment.get_template("species_template.html")
-dictionnaire = filler.get_species_data(json)
-
-css_file = open("data_samples/style.css")
-css = filler.get_string_from_file(css_file)
-
-
-filename = "rapport_espece.html"
-
-context = {"species_data": dictionnaire, "css_style": css}
-with open(filename, mode="w", encoding="utf-8") as results:
-    results.write(template.render(context))
+# df = filler.fetcher.get_json_data_to_DataFrame("data_samples/input.json")
+# print(filler.get_data(df, "references"))
+# print(filler.get_data_habitate(df, "current_habitats"))
+# print("Coucou")
+# print(filler.get_keys(df))
+# print(filler.get_species_data(df))
