@@ -8,12 +8,12 @@ import numpy as np
 
 class FileFetcher:
     def get_json_data_to_dataframe(self, filename):
-        data = json.load(open(filename))
+        data = json.load(open("data_samples/" + filename))
         df = json_normalize(data)
         return df
 
     def get_json_data(self, filename):
-        data = json.load(open(filename))
+        data = json.load(open("data_samples/" + filename))
         return data
 
     def get_template(self, filename):
