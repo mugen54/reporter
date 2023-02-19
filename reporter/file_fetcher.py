@@ -25,7 +25,7 @@ class FileFetcher:
 
     def get_css(self, filename):
         css_file = open("data_samples/" + filename)
-        css = self.get_string_from_file(css_file)
+        css = css_file.read()
         return css
 
     def get_string_from_file(self, file):
