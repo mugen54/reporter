@@ -1,6 +1,3 @@
-import pandas as pd
-import sys
-
 # sys.path.append("/home/mohammad/Desktop/reporter")
 from file_fetcher import FileFetcher
 from unittest import TestCase, main

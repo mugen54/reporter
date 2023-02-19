@@ -1,9 +1,8 @@
-import pandas as pd
-from file_fetcher import FileFetcher
+import file_fetcher
 
 
 class ReportFiller:
-    fetcher = FileFetcher()
+    fetcher = file_fetcher.FileFetcher()
 
     def generate(self, template_name, json_name, css_file_name, new_file_name):
         template = self.fetcher.get_template(template_name)
@@ -19,7 +18,7 @@ class ReportFiller:
             if key + ".content" in col:
                 if isinstance(df[col][0], list):
                     for item in df[col][0]:
-                        string += item + ","
+                        string += item + "\n\t\t\t"
                 else:
                     string += df[col][0]
             if key + ".references" in col:
@@ -27,7 +26,7 @@ class ReportFiller:
                     break
                 else:
                     for item in df[col][0]:
-                        string += "," + self.get_data(df, item)
+                        string += "\n\t\t\t" + self.get_data(df, item)
 
         return string
 

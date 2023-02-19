@@ -1,9 +1,6 @@
 import json
 from pandas import json_normalize
 import jinja2 as jinja
-import matplotlib as mpl
-import matplotlib.pyplot as plt
-import numpy as np
 
 
 class FileFetcher:

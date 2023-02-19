@@ -2,7 +2,7 @@ import pika, sys
 
 connection = pika.BlockingConnection(pika.ConnectionParameters(host="localhost"))
 channel = connection.channel()
-channel.exchange_declare(exchange="json_exchange", exchange_type="direct")
+channel.exchange_declare(exchange="json_exchange", exchange_type="fanout")
 
 try:
     filename = "".join(sys.argv[1])
@@ -17,6 +17,6 @@ with open(filename, "r") as file:
     message += file.read()
 
 
-channel.basic_publish(exchange="json_exchange", routing_key="json_queue", body=message)
+channel.basic_publish(exchange="json_exchange", routing_key="", body=message)
 print(" [x] Sent the json file")
 connection.close()
