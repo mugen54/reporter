@@ -1,0 +1,5 @@
+rabbitmq
+pandas
+jinja2
+matplotlib
+pika
