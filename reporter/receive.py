@@ -5,7 +5,7 @@ from report_filler import ReportFiller
 def main():
 
     connection = pika.BlockingConnection(
-    pika.ConnectionParameters(host='localhost', port=5672))
+    pika.ConnectionParameters(host='172.17.0.1', port=5672))
     channel = connection.channel()
 
     channel.exchange_declare(exchange="json_exchange", exchange_type="fanout")
